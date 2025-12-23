@@ -1,0 +1,20 @@
+ID,Title,Module,Pre-conditions,Steps,Expected Result
+TC_POL_001,Verify successful creation of a Life Insurance Policy,Policy Management,User is logged in as an Underwriter; Customer profile exists.,"1. Navigate to 'New Policy' menu.
+2. Select 'Life Insurance' from dropdown.
+3. Enter Coverage Amount: $500,000.
+4. Link to Customer ID 'CUST-102'.
+5. Click 'Calculate Premium'.
+6. Click 'Issue Policy'.",Policy is generated with status 'Active'; Policy ID is displayed; Premium matches the actuarial table.
+TC_CLM_005,Validate Auto-Claim rejection for expired policy,Claims,Policy 'POL-999' is in 'Expired' status.,"1. Log in as a Policy Holder.
+2. Go to 'File a Claim'.
+3. Select Policy 'POL-999'.
+4. Enter incident date (after expiration).
+5. Submit claim.",System displays error: 'Claim cannot be filed against an expired policy.'; Claim status remains 'Draft'.
+TC_PAY_012,Verify Payment Gateway integration for Credit Card,Payments,Unpaid invoice exists for Policy 'POL-123'.,"1. Go to Billing Dashboard.
+2. Select 'Pay Now' for invoice #INV-55.
+3. Choose 'Credit Card' payment method.
+4. Enter valid card details.
+5. Click 'Submit Payment'.",Transaction is authorized; Invoice status updates to 'Paid'; Confirmation email sent to user.
+TC_UI_MOD_001,Check responsiveness of Claim Dashboard on mobile,UI/UX,User is accessing application via mobile browser.,"1. Open 'Claim History' page.
+2. Rotate device from Portrait to Landscape.
+3. Scroll through the table of claims.",Layout adjusts without horizontal scrolling; All buttons remain clickable and correctly aligned.
