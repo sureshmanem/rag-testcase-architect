@@ -1,0 +1,7 @@
+pandas
+langchain-core
+langchain-huggingface
+langchain-qdrant
+qdrant-client
+streamlit
+langchain-ollama
